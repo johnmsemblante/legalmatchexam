@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="css/style.min.css" media="all">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/site.webmanifest">
+	<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<script src="src/js/jquery.min.js"></script>
+	<title>Legal Match FE Exam</title>
+</head>
+<body>
+	<!-- Header -->
+		<div class="header__wrapper">
+			<div class="header__wrapper-inner">
+				<div class="logo">
+					<img src="images/logo.png">
+				</div>
+				<div class="header-list">
+					<img src="images/headerdetails.png">
+				</div>
+			</div>
+		</div>
+	<!-- End Header -->
+
+	<!-- Main Body -->
+		<div class="main__wrapper">
+			<div class="main__wrapper-inner">
+				<h1 class="heading">
+					Find a Lawyer for your Legal Issue
+				</h1>
+				<h2 class="subheading">
+					Fast, Free and Confidential
+				</h2>
+
+				<div class="inner__wrapper">
+					<div class="inner__wrapper-left">
+						<div class="inner__wrapper-single">
+							<span class="label">
+								Enter Zip Code or City:
+							</span>
+							<div class="input__select-wrapper">
+								<span class="counter">1</span>
+								<div class="input__select-dropdown">
+        							<input id="locationInput" type="text" placeholder="Does not have to be where you live">
+								</div>
+							</div>
+						</div>
+						<div class="inner__wrapper-single">
+							<span class="label">
+								Choose a category:
+							</span>
+							<div class="input__select-wrapper">
+								<span class="counter">2</span>
+								<div class="input__select-dropdown">
+									<select id="selectCategory" onchange="changeFunc()">
+										<option>Click to choose a legal category</option>
+										<option attr-data="1">Family</option>
+										<option attr-data="2">Criminal Defense</option>
+										<option attr-data="3">Business</option>
+										<option attr-data="4">Personal Injury</option>
+										<option attr-data="5">Bankruptcy & Finances</option>
+										<option attr-data="6">Products & Services</option>
+										<option attr-data="7">Employment</option>
+										<option attr-data="8">Real Estate</option>
+										<option attr-data="9">Immigration</option>
+										<option attr-data="10">Wills, Trusts & Estates</option>
+										<option attr-data="11">Government</option>
+										<option attr-data="12">Intellectual Property</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="cantfindtrigger">Can't find your category? Click here</a>
+					</div>
+					<div class="inner__wrapper-right">
+						<h2 class="clientsheading">
+							Clients review Legal Match
+						</h2>
+						<div class="clients__review-wrapper">
+							<!-- Single -->
+							<div class="clients__review-single">
+								<div class="thumbnail-wrapper">
+									<div class="thumbnail">
+										<img src="images/review_thumb1.png">
+									</div>
+									<span class="name">
+										Mitchell M.
+									</span>
+									<span class="location">
+										Cherry Hill, NJ
+									</span>
+								</div>
+								<div class="content-wrapper">
+									<div class="review-title">
+										<span class="title">
+											Family Law
+										</span>
+										<img src="images/star.png">
+									</div>
+									<div class="content">
+										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ... 
+									</div>
+									<div class="action">
+										<span class="trigger">
+											Read Review
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- End Single -->
+							<!-- Single -->
+							<div class="clients__review-single">
+								<div class="thumbnail-wrapper">
+									<div class="thumbnail">
+										<img src="images/review_thumb2.png">
+									</div>
+									<span class="name">
+										Joel C.
+									</span>
+									<span class="location">
+										Little Rock, AK
+									</span>
+								</div>
+								<div class="content-wrapper">
+									<div class="review-title">
+										<span class="title">
+											Job & Employment Law
+										</span>
+										<img src="images/star.png">
+									</div>
+									<div class="content">
+										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ... 
+									</div>
+									<div class="action">
+										<span class="trigger">
+											Read Review
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- End Single -->
+							<!-- Single -->
+							<div class="clients__review-single">
+								<div class="thumbnail-wrapper">
+									<div class="thumbnail">
+										<img src="images/review_thumb3.png">
+									</div>
+									<span class="name">
+										Brigida R.
+									</span>
+									<span class="location">
+										Dallas, TX
+									</span>
+								</div>
+								<div class="content-wrapper">
+									<div class="review-title">
+										<span class="title">
+											Family Law
+										</span>
+										<img src="images/star.png">
+									</div>
+									<div class="content">
+										"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ... 
+									</div>
+									<div class="action">
+										<span class="trigger">
+											Read Review
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- End Single -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modalscreencat">
+			<div class="overlay-holder">
+				<span id="closemodalupper" class="close__modalcat">X</span>
+				<div class="heading">
+					<span class="count">3</span>
+					Which <span id="changebold" class="bold">Family law</span> issue(s) apply to your case?
+				</div>
+				<div class="selection">
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for1">
+						<label for="for1">Adoptions</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for2">
+						<label for="for2">Guardianship</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for3">
+						<label for="for3">Child Custody and Visitation</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for4">
+						<label for="for4">Paternity</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for5">
+						<label for="for5">Child Support</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for6">
+						<label for="for6">Separations</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for7">
+						<label for="for7">Divorce</label>
+					</div>
+					<div class="selection__checkbox">
+						<input type="checkbox" id="for8">
+						<label for="for8">Spousal Support or Alimony</label>
+					</div>
+				</div>
+				<div class="action__trigger">
+					<button>Find a Lawyer now</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="modalscreenclient">
+			<div class="overlay-holder">
+				<span id="closemodalupper" class="close__modalclient">X</span>
+				<div class="heading">
+					CLIENT REVIEWS
+				</div>
+				<div class="thumbnail__section">
+					<div class="thumbnail__section-avatar">
+						<img src="images/review_thumb1.png">
+					</div>
+					<div class="thumbnail__section-details">
+						<span class="name">
+							Mitchell M.
+						</span>
+						<span class="location">
+							Cherry Hill, NJ
+						</span>
+						<span class="title">
+							Family Law
+						</span>
+					</div>
+				</div>
+				<div class="rating__section-heading">
+					<h2>Rating</h2> <span>(29 users)</span> <img src="images/star.png">
+				</div>
+				<div class="rating__testimonial-wrapper">
+					<div class="rating__section">
+						<div class="rating__section-details">
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Overall
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Responded in a timely manner
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Answered questions clearly
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Understood needs
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Gave complete and clear information
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Knowledgeable in legal area
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Good value for money
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Would hire again
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+							<!-- Rate Single -->
+							<div class="rating__section-single">
+								<div class="label">
+									Would recommend to friend
+								</div>
+								<div class="rate">
+									<img src="images/star.png">
+								</div>
+							</div>
+							<!-- End Rate Single -->
+						</div>
+					</div>
+					<div class="testimonial__section">
+						<div class="testimonial__section-single">
+							<div class="testimonial__section-header">
+								<img src="images/star.png"> <span>by Dexter Marchal, 06/10/2016</span>
+							</div>
+							<div class="testimonial__section-content">
+								Deb did a great job. Got my bench warrant set asisde... was sure I was going to jail ... phew. Judge seemed to respect her and I got what I. Deb did a great job. Got my bench warrant set asisde... was sure I was going to jail ... phew. Judge seemed to respect her and I got what I
+							</div>
+						</div>
+						<div class="testimonial__section-single">
+							<div class="testimonial__section-header">
+								<img src="images/star.png"> <span>by Doe John, 06/10/2016</span>
+							</div>
+							<div class="testimonial__section-content">
+								Deb did a great job. Got my bench warrant set asisde... was sure I was going to jail ... phew. Judge seemed to respect her and I got what I. Deb did a great job. Got my bench warrant set asisde... was sure I was going to jail ... phew. Judge seemed to respect her and I got what I
+							</div>
+						</div>
+						<div class="testimonial__section-single">
+							<div class="testimonial__section-header">
+								<img src="images/star.png"> <span>by Lindse Yve, 06/10/2016</span>
+							</div>
+							<div class="testimonial__section-content">
+								Deb did a great job. Got my bench warrant set asisde... was sure I was going to jail ... phew. Judge seemed to respect her and I got what I. Deb did a great job. Got my bench warrant set asisde... was sure I was going to jail ... phew. Judge seemed to respect her and I got what I
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="closemodalreview">
+					CLOSE
+				</div>
+			</div>
+		</div>
+
+		<div id="modalscreenothercat">
+			<div class="overlay-holder">
+				<span id="closemodalupper" class="close__modalcat">X</span>
+				<div class="heading">
+					OTHER CATEGORIES
+				</div>
+				<div class="subheading">
+					Choose the category that best fits your case
+				</div>
+				<ul class="categories__wrapper">
+					<li>Abuse (Child, Domestic, Sexual)</li>
+					<li>Agencies & Administration</li>
+					<li>Automobile ( DUI, Crimes, Speeding )</li>
+					<li>Automobiles ( Accidents, Insurance )</li>
+					<li>Banking ( Business, Consumer )</li>
+					<li>Bars & Restaurants</li>
+					<li>Business Formation & Dissolution</li>
+					<li>Children (Adoption, Custody, Support)</li>
+					<li>Class Actions (Bad Drugs, Products)</li>
+					<li>Commercial Law and Contracts</li>
+					<li>Commercial Real Estate</li>
+					<li>Constitutional Law</li>
+					<li>Construction (Disputes, Liens)</li>
+					<li>Categories Item Here</li>
+					<li>Loremipsum Dolorsitamet,</li>
+					<li>Lonsectetur Scingelit  (Baseererkj, Mereit)</li>
+					<li>Miam Euvelit</li>
+					<li>Mempor Auctor (Estiarma, Toeruslej)</li>
+					<li>Nisultricies Dictumest.</li>
+					<li>Ntfring Sodalelit (Aeeticl Restoustoust)</li>
+					<li>Ntvarius Lectus & Congue </li>
+					<li>Pellentesque</li>
+					<li>Rigula Aliquamattis (Nestusotu, Wewreist)</li>
+					<li>Set Tigulempor</li>
+					<li>Sehicula Sedsitamet</li>
+					<li>Seque Nesturre </li>
+					<li>Tollis Gaurissed</li>
+					<li>Tempor Auctor (Estiarma, Toeruslej)</li>
+				</ul>
+			</div>
+		</div>
+	<!-- End Main Body -->
+	<script src="lib/autocomplete/auto-complete.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

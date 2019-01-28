@@ -1,0 +1,31 @@
+.header__wrapper{
+	@extend %overflow-hidden-fw;
+
+	&-inner{
+		@extend %overflow-hidden-fw;
+		max-width: $window-1100;
+		margin: auto;
+
+		.logo,
+		.header-list{
+			width: 50%;
+
+			img{
+				max-width: 100%;
+				width: auto;
+			}
+		}		
+
+		.logo{
+			float: left;
+		}
+
+		.header-list{
+			float: right;
+
+			img{
+				float: right;
+			}
+		}
+	}
+}
