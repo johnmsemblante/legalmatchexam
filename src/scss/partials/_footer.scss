@@ -1,0 +1,100 @@
+.column-one{
+	width: 100%;
+}
+
+.column-two{
+	width: 50%;
+}
+
+.column-three{
+	width: 33.33%;
+}
+
+.column-four{
+	width: 25%;
+}
+
+.prefooter__wrapper{
+	@extend %overflow-hidden-fw;
+	padding: 35px 0;
+
+	&-inner{
+		max-width: $window-1100;
+		margin: auto;
+	}
+
+	&-columns{
+		float: left;
+		padding: 0 15px;
+
+		.pnote{
+			font-family: $font-gotham-book;
+			font-size: $font-12;
+			color: $footerlightgrey;
+			padding: 15px 0 0 0;
+			display: block;
+		}
+
+		.ptitle{
+			font-family: $font-gotham-med;
+			font-size: $font-13;
+			color: $darkgrey;
+			text-transform: uppercase;
+			display: block;
+		}
+
+		.plist{
+			margin: 15px 0 0 0;
+			padding: 0;
+			list-style: none;
+
+			li{
+				a{
+					font-family: $font-gotham-book;
+					font-size: $font-12;
+					color: $footerlightgrey;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.ctaphone{
+			font-family: $font-gotham-med;
+			font-size: $font-14;
+			color: $darkgrey;
+			padding: 15px 0 0 0;
+			display: block;
+			text-decoration: none;
+		}
+
+		img{
+			display: block;
+		}
+
+		&.accr{
+			text-align: right;
+
+			a{
+				display: block;
+
+				img{
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+.footer__wrapper{
+	@extend %overflow-hidden-fw;
+	padding: 5px 0 45px;
+
+	&-inner{
+		max-width: 1100px;
+		margin: auto;
+		text-align: center;
+		font-family: $font-gotham-book;
+		font-size: $font-12;
+		color: $footerlightgrey;
+	}
+}

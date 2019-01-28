@@ -58,24 +58,24 @@
 								<span class="counter">2</span>
 								<div class="input__select-dropdown">
 									<select id="selectCategory" onchange="changeFunc()">
-										<option>Click to choose a legal category</option>
-										<option attr-data="1">Family</option>
-										<option attr-data="2">Criminal Defense</option>
-										<option attr-data="3">Business</option>
-										<option attr-data="4">Personal Injury</option>
-										<option attr-data="5">Bankruptcy & Finances</option>
-										<option attr-data="6">Products & Services</option>
-										<option attr-data="7">Employment</option>
-										<option attr-data="8">Real Estate</option>
-										<option attr-data="9">Immigration</option>
-										<option attr-data="10">Wills, Trusts & Estates</option>
-										<option attr-data="11">Government</option>
-										<option attr-data="12">Intellectual Property</option>
+										<option disabled selected>Click to choose a legal category</option>
+										<option>Family</option>
+										<option>Criminal Defense</option>
+										<option>Business</option>
+										<option>Personal Injury</option>
+										<option>Bankruptcy & Finances</option>
+										<option>Products & Services</option>
+										<option>Employment</option>
+										<option>Real Estate</option>
+										<option>Immigration</option>
+										<option>Wills, Trusts & Estates</option>
+										<option>Government</option>
+										<option>Intellectual Property</option>
 									</select>
 								</div>
 							</div>
 						</div>
-						<a href="#" class="cantfindtrigger">Can't find your category? Click here</a>
+						<span class="cantfind">Can't find your category? <span class="cantfindtigger">Click here</span></span>
 					</div>
 					<div class="inner__wrapper-right">
 						<h2 class="clientsheading">
@@ -160,7 +160,7 @@
 								<div class="content-wrapper">
 									<div class="review-title">
 										<span class="title">
-											Family Law
+											Business Law
 										</span>
 										<img src="images/star.png">
 									</div>
@@ -180,7 +180,93 @@
 				</div>
 			</div>
 		</div>
+	<!-- End Main Body -->
 
+	<!-- Prefooter -->
+		<div class="prefooter__wrapper">
+			<div class="prefooter__wrapper-inner">
+				<div class="prefooter__wrapper-columns column-four">
+					<a href="/"><img src="images/prefooterlogo.png"></a>
+					<span class="pnote">
+						LegalMatch quickly connects you with the right lawyer for your case.
+					</span>
+				</div>
+				<div class="prefooter__wrapper-columns column-four">
+					<div class="prefooter__wrapper-columns column-two">
+						<span class="ptitle">
+							MENU
+						</span>
+						<ul class="plist">
+							<li>
+								<a href="/">
+									About
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									How it works
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Post a Case
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="prefooter__wrapper-columns column-two">
+						<span class="ptitle">
+							LINKS
+						</span>
+						<ul class="plist">
+							<li>
+								<a href="/">
+									User Agreement
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Sitemap
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="prefooter__wrapper-columns column-four">
+					<span class="ptitle">
+						Contact us
+					</span>
+					<span class="pnote">
+						Want to tell us about your case and find a lawyer by phone?
+					</span>
+					<a href="tel: 415-946-0816" class="ctaphone">Call: 415-946-0816</a>
+				</div>
+				<div class="prefooter__wrapper-columns column-four accr">
+					<a href="/">
+						<img src="images/truste_logo.png">
+					</a>
+					<a href="/">
+						<img src="images/bbb_logo.png">
+					</a>
+				</div>
+			</div>
+		</div>
+	<!-- End Prefooter -->
+
+	<!-- Footer -->
+		<div class="footer__wrapper">
+			<div class="footer__wrapper-inner">
+				Copyright 1999-2016 LegalMatch. All rights reserved. LegalMatch®, the LegalMatch logo, and the tradedress are trademarks of LegalMatch. Patents Pending.
+			</div>
+		</div>
+	<!-- End Footer -->
+
+	<!-- Modals -->
 		<div id="modalscreencat">
 			<div class="overlay-holder">
 				<span id="closemodalupper" class="close__modalcat">X</span>
@@ -230,22 +316,22 @@
 
 		<div id="modalscreenclient">
 			<div class="overlay-holder">
-				<span id="closemodalupper" class="close__modalclient">X</span>
+				<span class="close__modalclient">X</span>
 				<div class="heading">
 					CLIENT REVIEWS
 				</div>
 				<div class="thumbnail__section">
 					<div class="thumbnail__section-avatar">
-						<img src="images/review_thumb1.png">
+						<img src="images/review_thumb1.png" class="replacethumbnail">
 					</div>
 					<div class="thumbnail__section-details">
-						<span class="name">
+						<span class="name replacename">
 							Mitchell M.
 						</span>
-						<span class="location">
+						<span class="location replacelocation">
 							Cherry Hill, NJ
 						</span>
-						<span class="title">
+						<span class="title replacetitle">
 							Family Law
 						</span>
 					</div>
@@ -383,7 +469,7 @@
 
 		<div id="modalscreenothercat">
 			<div class="overlay-holder">
-				<span id="closemodalupper" class="close__modalcat">X</span>
+				<span id="closemodalupper" class="close__modalothercat">X</span>
 				<div class="heading">
 					OTHER CATEGORIES
 				</div>
@@ -422,7 +508,7 @@
 				</ul>
 			</div>
 		</div>
-	<!-- End Main Body -->
+	<!-- End Modals -->
 	<script src="lib/autocomplete/auto-complete.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>

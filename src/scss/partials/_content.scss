@@ -16,6 +16,7 @@ body *{
 	background-position: center;
 
 	&-inner{
+		width: 100%;
 		max-width: $window-1100;
 		margin: auto;
 		padding: 34px 0;
@@ -48,7 +49,7 @@ body *{
 		&-left{
 			float: left;
 
-			.cantfindtrigger{
+			.cantfind{
 				font-size: $font-18;
 				font-family: $font-gotham-book;
 				color: $white;
@@ -56,6 +57,11 @@ body *{
 				display: block;
 				text-align: center;
 				text-decoration: none;
+
+				.cantfindtigger{
+					text-decoration: underline;
+					cursor: pointer;
+				}
 			}
 		}
 
@@ -137,6 +143,10 @@ body *{
 						&:-moz-placeholder {
 						  color: $grey;
 						}
+					}
+
+					select{
+						color: $grey;
 					}
 
 					option{
@@ -229,6 +239,7 @@ body *{
 					font-size: $font-10;
 					font-family: $font-gotham-book;
 					color: $gold;
+					cursor: pointer;
 
 					&:after{
 						content: '';
@@ -604,7 +615,7 @@ body *{
 		}
 	}
 
-	.close__modalcat{
+	.close__modalothercat{
 		color: $lightgrey;
 		font-size: $font-30;
 		font-family: $font-gotham-book;
